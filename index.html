@@ -1,0 +1,95 @@
+<html>
+
+<head>
+
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+</head>
+
+<body>
+
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+
+<a id="kakao-link-btn" href="javascript:sendLink()">
+
+  <img
+
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+
+  />
+
+</a>
+
+<script type="text/javascript">
+
+ Kakao.init('0b46a94560070052c5a88985d277e429');
+
+  function sendLink() {
+
+    Kakao.Link.sendDefault({
+
+      objectType: 'feed',
+
+      content: {
+
+        title: '선물과 메시지를 보냈습니다.',
+
+        description: '',
+
+        imageUrl:
+
+          'https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMDA0MTlfMTI5%2FMDAxNTg3MjMwNzQ2NzM4.vpzBzlqh2Ak72GeX_XmECcoLc0BfCnH43QkxyGP5X1gg.Y2FRF0c-IxGZEnPHh0BCgVn-XzFQ5ntnpynQzdmXHFkg.JPEG%2FF20FAB3B-52EC-4BCE-B82C-120C5CB4EFB4.jpeg&type=ofullfill340_600_png',
+
+        link: {
+
+          mobileWebUrl: 'https://verycutecats.000webhostapp.com',
+
+          webUrl: 'https://verycutecats.000webhostapp.com',
+
+        },
+
+      },
+
+      social: {
+
+        likeCount: , //99999가 최대입니다
+
+        commentCount: , //99999가 최대입니다
+
+        sharedCount: , //99999가 최대입니다
+
+      },
+
+      buttons: [
+
+        {
+
+          title: '선물함으로 가기',
+
+          link: {
+
+            mobileWebUrl: 'https://verycutecats.000webhostapp.com',
+
+            webUrl: 'https://verycutecats.000webhostapp.com',
+
+          },
+
+        },
+
+      ],
+
+    })
+
+  }
+
+</script>
+
+<!-- www.blackcats4567.com -->
+
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+
+  </body>
+
+</html>
